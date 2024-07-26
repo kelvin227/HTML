@@ -1,0 +1,92 @@
+.grid-container {
+  width: 100%;
+  margin: 0 auto;
+  height: 95vh;
+  display: flex;
+  border: 2px solid rgba(0, 0, 0, .4);
+  transition: 1s ease;
+}
+
+.sidebar {
+  width: 30%;
+  height: 100%;
+  background-color: rgb(197, 108, 237);
+  transition: 1s ease;
+  position: relative;
+}
+
+@keyframes example {
+  0%   {display: none;}
+  10%  {display: none;}
+  50%   {}
+  100%  {}
+  
+}
+
+.sidebar ul{
+  list-style: none;
+  animation-name: example;
+  animation-duration: 4s;
+}
+.sidebar ul li {
+  padding-bottom: 10%;
+}
+.sidebar ul a {
+  font-size: 150%;
+  
+  text-decoration: none;
+}
+
+.sidebar_small ul {
+  display: none;
+}
+
+.main-content {
+  width: 70%;
+  height: 100%;
+  background-color: #ccc;
+  transition: 1s ease;
+}
+
+.main-content_large {
+  width: 100%;
+}
+
+.sidebar_small {
+  width: 0%;
+}
+
+.m {
+  position: absolute;
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: 0px 1px 4px 1px rgba(0 ,0, 0, .3);
+  left: 100%;
+  top: 2rem;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+iframe{
+  height: 100%;
+  width: 100%;
+}
+
+.badge{
+  background:grey; 
+  border-radius:100%; 
+  border: 2px solid rgb(70, 68, 68); 
+  padding:2px;  
+  font-weight:bold; 
+  font-size:0.5em; 
+  display:inline-block; 
+  width:1em; 
+  height:1em; 
+  text-align:center;
+}
+
+.badge:hover{
+  background-color: rgb(224, 99, 224);
+}

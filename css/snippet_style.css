@@ -1,0 +1,10 @@
+.title{
+    background-color: black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 25vh;
+}
+
