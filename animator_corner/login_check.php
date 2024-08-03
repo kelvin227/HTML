@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 // Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = $_POST['username'];
@@ -35,11 +34,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($user_data) {
             // Verify password (plaintext comparison)
             if ($password === $user_data['password']) {
+                if($user_data['roles'] === 'animator'){
                 // Authentication successful
                 $_SESSION['username'] = $user_data['username'];
                 $_SESSION['user_id'] = $user_data['userid'];
                 header("Location: main_feed.php");
                 exit;
+                } else{
+                    $_SESSION['error'] = "This account isn't an animator account";
+                    header("Location: login.php");
+                }
             } else {
                 // Invalid password
                 $_SESSION['error'] = "Invalid username or password";

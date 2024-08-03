@@ -22,8 +22,9 @@ $data = [
         'key1' => 'value1',
         'key2' => 'value2'
     ],
-    'data2' => 
-        "name"
+    'data2' => [
+        "name" => 'KELLY'
+        ]
 ];
 header('Content-Type: application/json');
 echo json_encode($data);

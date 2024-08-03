@@ -20,12 +20,13 @@
 <body>
     <?php
                         
-                        error_reporting(0);
+                        //error_reporting(0);
                         
+
                         session_start();
-                        session_destroy();
-                    
-                    echo $_SESSION['loginMessage'];
+
+						echo $_SESSION['error'];
+                        //session_destroy();
                     
                     ?>
 	<!-- main -->

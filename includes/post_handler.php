@@ -1,13 +1,11 @@
 <?php
 
 require_once'dbconnect.php';
-session_start();
-
 if(isset($_POST['submit']))
 {
     $text=htmlspecialchars($_POST['text']);
     $user_id=$_SESSION['user_id'];
-    $timestamp= date('Y-m-d H:i:s', time());
+    $timestamp= date('Y-m-d h:i:sa');
 
     
     $sql="INSERT INTO questions (text, user_id, time_stamp, ratings) VALUES ('$text','$user_id', '$timestamp', '0')";
@@ -22,7 +20,7 @@ if(isset($_POST['submit']))
         
         </script>";
         
-        header("location: ../main_feed.php");
+        header("location: main_feed.php");
         exit();
     }
     

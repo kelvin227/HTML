@@ -1,11 +1,4 @@
 
-<!-- partial:index.partial.html -->
-<!--
-Author: Colorlib
-Author URL: https://colorlib.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <?php
 
 require_once 'includes/config.php';

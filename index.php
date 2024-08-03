@@ -32,6 +32,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Codegator - Connecting programmers, animators, and gamers. Join our community, collaborate on projects, and grow your skills.">
+    <meta property="og:description" content="Codegator - Connecting programmers, animators, and gamers. Join our community, collaborate on projects, and grow your skills.">
     <meta name="keywords" content="Codegator, gator, coding, programming, learntocode, Codegator tech connect, Codegator developers network, Codegator animation and gaming, Codegator programming community, Codegator web development, Tech connect, Gamer hub, Digital creative platform, technology, science, developers, html, css, javascript, JS, codegator, PHP, Connect with programmers, animators, and gamers, Tech connect for startups, Web development and animation services, Gaming community forum in Nigeria">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Codegator</title>

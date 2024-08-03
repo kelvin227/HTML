@@ -129,7 +129,7 @@ $hasMoreRows = mysqli_num_rows(mysqli_query($data, "SELECT 1 FROM questions ORDE
                   
                 </li>
                 <li class="has-subnav">
-                    <a href="integrate.php">
+                    <a href="Tools.php">
                         <i class="fa fa-laptop fa-2x"></i>
                         <span class="nav-text">
                             integrate
@@ -144,13 +144,22 @@ $hasMoreRows = mysqli_num_rows(mysqli_query($data, "SELECT 1 FROM questions ORDE
                             CodeFusion
                         </span>
                     </a>
-                    
                 </li>
                 <li class="has-subnav">
                     <a href="messenger.php">
                        <i class="fa fa-comments fa-2x"></i>
                         <span class="nav-text">
                             FusionMessenger
+                        </span>
+                    </a>
+                   
+                </li>
+                </li>
+                <li class="has-subnav">
+                    <a href="main_ask.php">
+                       <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+                        <span class="nav-text">
+                            Ask community
                         </span>
                     </a>
                    
