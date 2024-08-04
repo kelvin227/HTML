@@ -42,7 +42,8 @@ if($_FILES) {
     <h1>Code Editor</h1>
 <textarea id="myCodeEditor">
 </textarea>
-
+<iframe src="" frameborder="0" id="runner"></iframe>
+<button id="run-btn" onclick="runCode()">Run</button>
 <button id="upload-btn" onclick="save();">upload file</button>
 <button id="retrieve-btn" onclick = "load()">Retrieve file</button>
 
@@ -65,6 +66,20 @@ if($_FILES) {
     });
         editor.setValue('');
     
+const iframe = document.getElementById('runner');
+function runCode() {
+  // Get the edited code from CodeMirror
+const code = editor.getValue();
+
+  // Create a new HTML document within the iframe
+  const doc = iframe.contentDocument || iframe.contentWindow.document;
+  doc.open();
+  doc.write('<html><body>' + code + '</body></html>');
+  doc.close();
+
+  // Run the code within the iframe
+  iframe.contentWindow.eval(code);
+}
 
 //make an Ajax reuqst to fetch the file content
 const filepath = 'embed.js';
