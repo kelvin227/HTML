@@ -9,13 +9,14 @@
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
-
+/*
 .slide {
-    flex: 0 0 100%; /* Make each slide take up full width */
+    flex: 0 0 100%; /* Make each slide take up full width 
     padding: 20px;
     border: 1px solid #ccc;
+    ;
 }
-
+*/
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -33,4 +34,8 @@
 
 .next {
     right: 0;
+}
+table tr th{
+    background-color: #007bff;
+    
 }

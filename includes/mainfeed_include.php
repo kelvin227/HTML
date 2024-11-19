@@ -41,7 +41,15 @@ $hasMoreRows = mysqli_num_rows(mysqli_query($data, "SELECT 1 FROM questions ORDE
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/include_style.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
-  </head>
+    <style>
+        .curve{
+            border-radius: 10px !important;
+            font-size:115%; 
+            border: 1px solid black; 
+            
+        }
+    </style>
+</head>
   <body>
     <div class="area">
         <center>
@@ -52,8 +60,8 @@ $hasMoreRows = mysqli_num_rows(mysqli_query($data, "SELECT 1 FROM questions ORDE
             <form method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <label style="color: white;">language tag:</label>
                 <select name="sort">
-                <option value="ratings">default</option>
-                <option value="php">cat</option>
+                <option value="ratings">By ratings</option>
+                <option value="php">PHP</option>
                 <option value="ratings1">dog</option>
                 </select>
             <button type="submit">filter</button>
@@ -68,7 +76,7 @@ $hasMoreRows = mysqli_num_rows(mysqli_query($data, "SELECT 1 FROM questions ORDE
             while($q_info=$q_result1->fetch_assoc())
             {
                 $questionId = $q_info['id'];
-                $questionText = $q_info['text'];
+                $questionText = $q_info['q'];
                 $user_id = $q_info['user_id'];
     
                 //logic to get username from profile database
@@ -76,25 +84,36 @@ $hasMoreRows = mysqli_num_rows(mysqli_query($data, "SELECT 1 FROM questions ORDE
                 $p_result1 = mysqli_query($data, $p);
                 $p_info = $p_result1->fetch_assoc();
                 $username=$p_info['username'];
+
+                //timestamp logic
+                $timestamp = $q_info['time_stamp'];
+                $dateTime = new DateTime($timestamp);
+                $now = new DateTime();
+                $interval = $now->diff($dateTime);
+
+                $formatted = ($interval->days > 0) ? $dateTime->format('y-m-d') : $dateTime->format('H:i');
             ?>
             
-            <div class="slide">
-        
-            <tr>
+                    
+            <tr onclick="window.location.replace('v_profile.php?ids=<?php echo $user_id;?>')">
+
+            <th colspan="3"><center><div class="curve"><?php echo"$username"; ?><i class="fa fa-comments fa-2x"></i></div></center></th>
                 
-            <th style="font-size:115%; border-top: 1px solid black;"><?php echo"$username"; ?></th>
-                </tr>
+            </tr>
         <tr>
-        <td class="badge btn-info"><?php $_SESSION['time_stamp']=$q_info['time_stamp']; echo"{$q_info['time_stamp']}";?></td>
+        <td class="badge btn-info"><center><?php echo $formatted;?></center></td>
             </tr>
             
-            <tr style="height:15em;  background:  color: white;">
-                <td onclick="window.location.replace('includes/post.php?ids=<?php echo $questionId;?> & page=<?php echo 0; ?>')"><center><p><a href="" style="text-decoration: none; overflow:hidden; color: Black;"><?php echo"$questionText";?></a></p></center></td>
+            <tr style="height:15em;  background-color: white;">
+                <td onclick="window.location.replace('includes/post.php?ids=<?php echo $questionId;?> & page=<?php echo 0; ?>')" colspan="3"><center><p><?php echo"$questionText";?></a></p></center></td>
             </tr>
-                
+            <tr>
+                <td><center><i class="fa fa-heart fa-2x"></i></center></td>
+                <td><center><i class="fa fa-comment fa-2x"></center></i></td>
+                <td><center><i class="fa fa-share fa-2x"></center></i></td>
+            </tr>
                 <tr><td>&nbsp;&nbsp;</td></tr>
                 <tr><td>&nbsp;&nbsp;</td></tr>
-                <div class="slide"></div>
             <?php
                 
             }
@@ -129,7 +148,7 @@ $hasMoreRows = mysqli_num_rows(mysqli_query($data, "SELECT 1 FROM questions ORDE
                   
                 </li>
                 <li class="has-subnav">
-                    <a href="Tools.php">
+                    <a href="tools/integrate_test.php">
                         <i class="fa fa-laptop fa-2x"></i>
                         <span class="nav-text">
                             integrate
@@ -146,14 +165,13 @@ $hasMoreRows = mysqli_num_rows(mysqli_query($data, "SELECT 1 FROM questions ORDE
                     </a>
                 </li>
                 <li class="has-subnav">
-                    <a href="messenger.php">
+                    <a href="chat-app/home.php">
                        <i class="fa fa-comments fa-2x"></i>
                         <span class="nav-text">
                             FusionMessenger
                         </span>
                     </a>
                    
-                </li>
                 </li>
                 <li class="has-subnav">
                     <a href="main_ask.php">

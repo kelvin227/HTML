@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include'dbconnect.php';
+include 'dbconnect.php';
 
 if($data==false)
 {

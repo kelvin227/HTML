@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Codegator</title>
     <style>
-        .dropdown{
+            .dropdown, .dropdow{
             position: relative;
             display: inline-block;
         }
 
-        .dropdown-content{
+        .dropdown-content, .dropdown-conten{
             display: None;
             position: absolute;
-            
             background-color: #f9f9f9;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             padding: 12px 16px;
             z-index: 1px;
         }
-        .dropdown-content a {
+        .dropdown-content a, .dropdown-conten a {
             decoration: None;
         }
-        .dropdoown-content a:hover {
+        .dropdoown-content a:hover, .dropdown-conten a:hover {
             color: blue !important;
         }
-        .dropdown:hover .dropdown-content {
+        .dropdown:hover .dropdown-content, .dropdow:hover .dropdown-conten {
             color: White;
             display:block;
+        }
+        @media only screen and (max-width: 768px) {
+            .dropdown:hover ~ .dropdow {
+                padding-top: 100px;
+
+            }
+            
         }
     </style>
     <meta charset="utf-8">
@@ -34,9 +41,18 @@
     <meta name="description" content="Codegator - Connecting programmers, animators, and gamers. Join our community, collaborate on projects, and grow your skills.">
     <meta property="og:description" content="Codegator - Connecting programmers, animators, and gamers. Join our community, collaborate on projects, and grow your skills.">
     <meta name="keywords" content="Codegator, gator, coding, programming, learntocode, Codegator tech connect, Codegator developers network, Codegator animation and gaming, Codegator programming community, Codegator web development, Tech connect, Gamer hub, Digital creative platform, technology, science, developers, html, css, javascript, JS, codegator, PHP, Connect with programmers, animators, and gamers, Tech connect for startups, Web development and animation services, Gaming community forum in Nigeria">
+    <!--Enable fullscreen mode -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!---set status bar style---->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!--Hide toolbar--->
+    <meta name="apple-mobile-web-app-fullscreen" content="yes">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Codegator</title>
-    <link rel="icon" type="image/png" href="img/logo.JPG" style="border-radius: 15px;">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="img/img/logo(header).png" style="border-radius: 15px;">
+    <link rel="shortcut icon" href="img/logo(header).png" type="image/png">
     <!-- web-fonts -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -44,10 +60,7 @@
     <link href="css/mobile-menu.css" rel="stylesheet">
     <!-- font-awesome -->
     <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    
+    <!-- Bootstrap -->    
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Style CSS -->
     <link href="css/style.css" rel="stylesheet">
@@ -62,7 +75,7 @@
 </head>
 <body>
 <div id="main-wrapper">
-<!-- Page Preloader -->
+<!-- Page Preloader--->
 <div id="preloader">
     <div id="status">
         <div class="status-mes"></div>
@@ -83,7 +96,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-                <a class="navbar-brand" href="index.html"><img src="img/logo_header_.png" alt=""></a>
+                <a class="navbar-brand" href="index.html"><img src="img/logo(header).png" alt=""></a>
         </div>
 
 
@@ -113,11 +126,11 @@
                                 </ul>
                                 <ul class="col-sm-3">
                                     <li class="dropdown-header">Coding Courses</li>
-                                    <li><a href="includes/lessons.php">Realistic language Character</a></li>
-                                    <li><a href="includes/lessons.php">Clean Interface</a></li>
-                                    <li><a href="includes/lessons.php">Fun learning Environment</a></li>
-                                    <li><a href="includes/lessons.php">Responsive Design</a></li>
-                                    <li><a href="includes/lessons.php">Digital Certificate</a></li>
+                                    <li><a href="tutorial/lessons.php">Realistic language Character</a></li>
+                                    <li><a href="tutorial/lessons.php">Clean Interface</a></li>
+                                    <li><a href="tutorial/lessons.php">Fun learning Environment</a></li>
+                                    <li><a href="tutorial/lessons.php">Responsive Design</a></li>
+                                    <li><a href="tutorial/lessons.php">Digital Certificate</a></li>
                                 </ul>
                                 <ul class="col-sm-3">
                                     <li class="dropdown-header">Web builder</li>
@@ -466,10 +479,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/gator_logo2.png" alt="Image"></a>
+                <a href="#"><img src="img/gator_logo2.PNG" alt="Image"></a>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/gator_logo3.png" alt="Image"></a>
+                <a href="#"><img src="img/gator_logo3.PNG" alt="Image"></a>
             </div>
         </div>
     </div>
@@ -487,7 +500,7 @@
                 <div class="col-sm-4 footer-block">
                     <div class="footer-widget widget_text">
                         <div class="footer-logo">
-                            <a href="#"><img src="img/gator_logo.png" alt="" height="50%" width="200px"></a>
+                            <a href="#"><img src="img/gator_logo.PNG" alt="" height="50%" width="200px"></a>
                         </div>
                         <p>Continually matrix cross functional opportunities whereas ethical information. Compellingly streamline enabled human capital before resource-leveling internal or "organic".</p>
 
@@ -563,10 +576,10 @@
                             <a href="animator_corner/sign_up.php">Animator's corner</a>
                         </span>
                 </li><br />
-                <li class="dropdown">
+                <li class="dropdow">
                 <!-- sign up drop down-->
                     <a href="#">Login<span><i class="fa fa-angle-down"></i></span></a>
-                        <span class="dropdown-content"> 
+                        <span class="dropdown-conten"> 
                             <h4><a href="login.php">Developer platform</a></h4>
                             <h4><a href="animator_corner/login.php">Animator's corner</a></h4>
                         </span>

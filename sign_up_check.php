@@ -67,10 +67,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     {
         try {
             // Establish database connection
-            if ($user_data) {
+            if ($sign_up) {
                 $_SESSION['user_id'] = $user_data['userid'];
                 $_SESSION['username'] = $user_data['username'];
-                header("location:profile.php");
+                header("location: profile.php");
 
             }
         }

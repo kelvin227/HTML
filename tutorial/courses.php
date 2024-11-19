@@ -16,10 +16,10 @@ $q_edu = mysqli_query($data, $edu);
 <div class="navbar nav-inverse" style="background-color: black;">
     <ul class="nav navbar-nav">
         <li><a href="../index.php">Home</a></li>
-        <li><a href="../tutorial/courses.php">Courses</a></li>
-        <li><a href="">Lesssons</a></li>
-        <li><a href="">Exams</a></li>
-        <li><a href="">Help</a></li>
+        <li><a href="courses.php">Courses</a></li>
+        <li><a href="lessons.php">Lesssons</a></li>
+        <li><a href="exams.php">Exams</a></li>
+        <li><a href="help.php">Help</a></li>
     </ul>
 </div>
 <center>

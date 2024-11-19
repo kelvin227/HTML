@@ -11,12 +11,20 @@
     <script src="../codemirror-5.65.17/lib/codemirror.js"></script>
     <script src="../codemirror-5.65.17/mode/javascript/javascript.js"></script>
     <script src="../js/jquery-2.1.4.min.js"></script>
+    <!--- online resources cdns--->
+    
+    <style>
+        iframe{
+            width: 100%;
+            height: 50%;
+        }
+    </style>
 </head>
 <body>
     <h1>Code Editor</h1>
 <textarea id="myCodeEditor">
 </textarea>
-<iframe src="" frameborder="0" id="runner"></iframe>
+<iframe src="" id="runner" width="100%"></iframe>
 <button id="run-btn" onclick="runCode()">Run</button>
 </body>
 

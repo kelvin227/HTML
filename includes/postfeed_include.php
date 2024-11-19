@@ -131,7 +131,7 @@ if(isset($_POST['comment']))
             </tr>
             
             <tr style="height:15em; color: white;  background: linear-gradient(150deg, #8700ff 20%, #f000ff 100%);">
-                <td><center><p><?php echo"{$q_info['text']}";?></p></center></td>
+                <td><center><p><?php echo"{$q_info['q']}";?></p></center></td>
             </tr>
                 
                 
